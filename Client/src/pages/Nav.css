@@ -1,4 +1,16 @@
-.nav-container{
+.nav-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background: #00fbe8;
+}
+
+.Home{
+    width: 20%;
+}
+
+.loginAndSignUp{
+    display: flex;
+    width: 20%;
 }

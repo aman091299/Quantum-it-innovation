@@ -9,8 +9,8 @@ const Nav = () => {
 
     return (
         <nav className="nav-container">
-            <button onClick={() => navigate("/")}>Home</button>
-            <div>
+            <button className='Home' onClick={() => navigate("/")}>Home</button>
+            <div className="loginAndSignUp">
                 {token ? (
                     <Logout />
                 ) : (
