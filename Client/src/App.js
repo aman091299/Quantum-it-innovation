@@ -17,15 +17,12 @@ function App() {
           }
         />
 <Route path="/login" element={
-            <OpenRoute>
               <Login />
-            </OpenRoute>
           }
         />
 <Route path="/signup" element={
-            <OpenRoute>
+
               <Signup  />
-            </OpenRoute>
           }
         />
 </Routes>

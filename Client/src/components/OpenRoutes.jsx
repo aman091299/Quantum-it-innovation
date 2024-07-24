@@ -6,9 +6,10 @@ function OpenRoute({ children }) {
   // const { token } = useSelector((state) => state.auth)
   const token=localStorage.getItem("token") ? JSON.parse(localStorage.getItem("token")) : null
   if (token === null) {
-    return children
+    return <Navigate to="/login" />
+    
   } else {
-    return <Navigate to="/" />
+    return children
   }
 }
 export default OpenRoute;

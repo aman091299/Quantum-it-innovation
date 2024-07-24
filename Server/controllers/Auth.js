@@ -24,7 +24,7 @@ exports.signup = async (req, res) => {
 
         //validate krlo
         if (!name || !email || !password || !dob) {
-            return res.status(403).json({
+            return res.status(200).json({
                 success: false,
                 message: 'All fields are mandatory'
             })
@@ -35,7 +35,7 @@ exports.signup = async (req, res) => {
         console.log("checkUserExist", checkUserExist)
 
         if (checkUserExist) {
-            return res.status(401).json({
+            return res.status(200).json({
                 success: false,
                 message: "user already exist ,login please"
             })
@@ -92,7 +92,7 @@ exports.login = async (req, res) => {
 
         //user not exist
         if (!user) {
-            return res.status(401).json({
+            return res.status(200).json({
                 success: false,
                 message: 'please signup',
             })
@@ -102,7 +102,7 @@ exports.login = async (req, res) => {
         //check password
         const compare = await bcrypt.compare(password, user.password);
         if (!compare) {
-            return res.status(400).json({
+            return res.status(200).json({
                 success: false,
                 message: 'incorrect password '
             })
